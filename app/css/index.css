@@ -1,0 +1,135 @@
+html, body {
+  font-size: 62.5%;
+  font-family: 'Microsoft YaHei UI'; }
+
+ul {
+  margin: 0;
+  padding: 0; }
+
+li {
+  list-style: none;
+  margin: 0;
+  padding: 0; }
+
+.todo-head {
+  height: 3rem;
+  text-align: center;
+  width: 100%;
+  background-color: #428bca;
+  font-size: 1.5rem;
+  color: #ffffff;
+  line-height: 3rem;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  padding: 0.2rem 0; }
+
+.todo-main {
+  position: absolute;
+  top: 3rem;
+  left: 0;
+  right: 0;
+  bottom: 3rem;
+  padding-top: 1rem;
+  overflow-y: scroll;
+  overflow-scrolling: touch;
+  -webkit-overflow-scrolling: touch;
+  background-color: #dfdfdf; }
+  .todo-main .list-group .list-group-item {
+    font-size: 1.3rem;
+    color: #ffffff; }
+    .todo-main .list-group .list-group-item .todo {
+      width: 80%;
+      float: left; }
+    .todo-main .list-group .list-group-item .state {
+      width: 20%;
+      float: left; }
+    .todo-main .list-group .list-group-item.finish {
+      background-color: #5cb85c; }
+    .todo-main .list-group .list-group-item.not {
+      background-color: #d9534f; }
+
+.addtodo {
+  width: 5rem;
+  height: 5rem;
+  position: fixed;
+  bottom: 5rem;
+  right: 1rem;
+  border-radius: 5rem;
+  border: 2px solid #428bca;
+  line-height: 5rem;
+  text-align: center; }
+  .addtodo:before {
+    font-size: 4rem;
+    line-height: 5rem;
+    color: #428bca; }
+
+.reset {
+  width: 5rem;
+  height: 5rem;
+  position: fixed;
+  bottom: 5rem;
+  left: 1rem;
+  border-radius: 5rem;
+  border: 2px solid #428bca;
+  line-height: 5rem;
+  text-align: center; }
+  .reset:before {
+    font-size: 4rem;
+    line-height: 5rem;
+    color: #428bca; }
+
+.mark {
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  z-index: 10;
+  background-color: rgba(0, 0, 0, 0.8); }
+  .mark .addbox {
+    position: fixed;
+    top: 50%;
+    z-index: 10;
+    background-color: #ffffff;
+    width: 90%;
+    left: 50%;
+    margin-left: -45%;
+    margin-top: -45%;
+    border-radius: 3px;
+    box-shadow: 0 0 5px #636363;
+    padding: 2rem; }
+    .mark .addbox button {
+      margin-top: 1rem; }
+
+.todo-footer {
+  height: 3rem;
+  background-color: #FFFFFF;
+  color: #dfdfdf;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  right: 0;
+  padding: 0.2rem 0; }
+  .todo-footer ul {
+    width: 100%;
+    height: 100%; }
+    .todo-footer ul li {
+      float: left;
+      width: 50%;
+      position: relative;
+      height: 100%;
+      text-align: center;
+      font-size: 1rem; }
+      .todo-footer ul li span {
+        display: block;
+        width: 100%;
+        text-align: center; }
+        .todo-footer ul li span:before {
+          font-size: 2rem; }
+      .todo-footer ul li.active {
+        color: #428bca; }
+
+/*# sourceMappingURL=index.css.map */

@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/index.css">
+    <link href="//cdn.bootcss.com/font-awesome/4.6.3/css/font-awesome.css" rel="stylesheet">
+    <script src="js/vue.js"></script>
+    <script src="js/jquery.min.js"></script>
+    <script src="js/index.js"></script>
+</head>
+<body id="app">
+<div class="todo-head">
+    任务管理系统
+</div>
+<div class="todo-main">
+    <div class="container">
+        <ul class="list-group">
+            <li class="list-group-item clearfix"
+                v-for="todo in todo_list"
+                :class="{'not':!todo.todo_state,'finish':todo.todo_state}" @click="finish(todo)"
+            >
+                <div class="todo">
+                    任务名称：<span v-text="todo.todo_name"></span>
+                </div>
+                <div class="todo">
+                    开始时间：<span v-text="todo.todo_startTime"></span>
+                </div >
+
+                <div class="todo">
+                    完成时间: <span v-text="todo.todo_finishTime"></span>
+                </div>
+                <div class="state">
+                    <span class="fa fa-close" v-show="!todo.todo_state"></span>
+                    <span class="fa fa-check" v-show="todo.todo_state"></span>
+                </div>
+            </li>
+        </ul>
+    </div>
+    <rihel></rihel>
+    <rihel></rihel>
+    <rihel></rihel>
+    <rihel></rihel>
+    <rihel></rihel>
+    <rihel></rihel>
+    <rihel></rihel>
+</div>
+<div class="mark" v-show="addoff" :transition="transitionName">
+    <div class="addbox">
+        <h2 style="text-align: center;">新增任务</h2>
+        <label >名称：</label>
+        <input type="text" class="form-control" v-model="newItem">
+        <button class="btn btn-primary" @click="addlist()" @keydown.enter="addlist()">添加</button>
+        <button class="btn btn-danger" @click="addGo()">取消</button>
+    </div>
+</div>
+<div class="addtodo fa fa-plus" @click="addGo()">
+</div>
+<div class="reset fa fa-trash-o"
+@click="reset()">
+</div>
+<div class="todo-footer">
+    <ul>
+        <li class="active">
+            <span class="fa fa-home"></span>
+            概览
+        </li>
+        <li>
+            <span class="fa fa-line-chart"></span>
+            统计
+        </li>
+    </ul>
+</div>
+</body>
+</html>
